@@ -45,18 +45,18 @@ body {
   .toggle-btn {
     font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
     font-size: 1.2vw; /* Tamanho do botão ajustado com vw */
-    background-color: #ffbf00; /* Cor dourada para o botão */
+    background-color: #ffbf0079; /* Cor dourada para o botão */
     color: #333; /* Cor do texto no botão */
     border: none;
     outline: none;
-    padding: 1% 2%; /* Ajuste de padding para harmonizar */
+    padding: 1% 1%; /* Ajuste de padding para harmonizar */
     border-radius: 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: fixed;
     top: 5%;
-    right: 2%;
+    right: 0%;
     z-index: 9999;
   }
 
@@ -69,13 +69,13 @@ body {
     font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
     display: none;
     position: fixed;
-    bottom: 10%;
-    right: 2%;
-    background-color: #ffbf00; /* Cor dourada para o botão */
+    bottom: 8%;
+    right: 0%;
+    background-color: #ffbf0079; /* Cor dourada para o botão */
     color: #333; /* Cor do texto no botão */
     border: none;
     outline: none;
-    padding: 1% 2%; /* Ajuste de padding para harmonizar */
+    padding: 1% 1.5%; /* Ajuste de padding para harmonizar */
     border-radius: 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
