@@ -300,3 +300,24 @@ body {
     background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
     transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
   }
+
+  /* Estilo para o bloco de código Python */
+  pre {
+    max-width: 90vw;
+    margin: 0 auto;
+    overflow-x: auto; /* Adicionar barra de rolagem horizontal, caso necessário */
+    white-space: pre-wrap; /* Manter a quebra de linha */
+  }
+
+  /* Ajuste de estilos para o código dentro do bloco <code> */
+  pre code {
+    display: block;
+    padding: 2vw; /* Tamanho do padding ajustado com vw */
+    background-color: #f0f0f0; /* Cor de fundo para destacar o bloco de código */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace; /* Fonte monoespaçada para manter a formatação */
+    font-size: 2vw; /* Tamanho da fonte ajustado com vw */
+    line-height: 1.4; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto do código */
+  }
