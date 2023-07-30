@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>PORTFOLIO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link para fonte do Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="./style1.css" rel="stylesheet">
-  <style>
+
     /* Estilos gerais */
     body {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
@@ -303,73 +295,4 @@
       background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
       transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
     }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>PORTFÓLIO PYTHON - Ivan R. Sorgi</h1>
-    <!-- Menu de navegação -->
-    <ul class="nav-menu">
-      <li class="nav-menu-item">
-        <a class="nav-link" href="../index.html">Power BI</a>
-     
-        </div>
-      </li>
-      <li class="nav-menu-item">
-        <a class="nav-link" href="#">Python</a>
-      
-        </div>
-      </li>
-      <li class="nav-menu-item">
-        <a class="nav-link" href="../certificações/certificados.html">Certificados</a>
-        
-      </li>
-    </ul>
-  </header>
-
-
-
-  <div class="artigo" id="artigo1">
-    
-  </div>
-  
-  <div class="artigo" id="artigo2">
-    </div>
-   
-  <!-- Mais artigos e seções podem ser adicionados aqui -->
-
-  <!-- Botão de alternância -->
-  <button class="toggle-btn" onclick="alternarModo()">Alternar Modo</button>
-
-  <!-- Botão de voltar ao topo -->
-  <button class="scroll-to-top-btn" onclick="scrollToTop()">&#8593;</button>
-
-  <footer>
-    <a class="social-btn" id="github-btn" href="https://github.com/seu_usuario_github" target="_blank">GitHub</a>
-    <a class="social-btn" id="linkedin-btn" href="https://www.linkedin.com/in/seu_perfil_linkedin" target="_blank">LinkedIn</a>
-    <a class="social-btn" id="instagram-btn" href="https://www.instagram.com/seu_perfil_instagram" target="_blank">Instagram</a> 
-    <p>Ivan R. Sorgi - 2023 - Todos Os Direitos Reservados</p>
-  </footer>
-
-  <script>
-    // Função para alternar entre o modo claro e escuro
-    function alternarModo() {
-      document.body.classList.toggle('dark-mode');
-    }
-
-    // Função para rolar suavemente para o topo da página
-    function scrollToTop() {
-      window.scroll({ top: 0, behavior: 'smooth' });
-    }
-
-    // Mostrar o botão de rolagem suave quando a página for rolada
-    window.onscroll = function() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.querySelector('.scroll-to-top-btn').style.display = 'block';
-      } else {
-        document.querySelector('.scroll-to-top-btn').style.display = 'none';
-      }
-    };
-  </script>
-</body>
-</html>
+ 
