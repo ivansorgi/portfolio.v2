@@ -35,6 +35,12 @@ body {
     padding-top: 0%; /* Ajuste de padding para harmonizar */
   }
 
+  p {
+    font-size: 1.5vw; /* Tamanho da fonte para o texto do cabeçalho (ajuste conforme desejado) */
+    line-height: 0.5; /* Espaçamento entre linhas para tornar o texto mais legível */
+  }
+
+
   /* Botão de alternância */
   .toggle-btn {
     font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
