@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfólio Power BI</title>
+  <title>PORTFOLIO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link para fonte do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -129,12 +129,19 @@
     .nav-link {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
       font-size: 1.5vw; /* Tamanho do link ajustado com vw */
-      color: #795d09; /* Cor do link em dourado */
+      color: #ffffff; /* Cor do link em dourado */
+      background-color: #333; /* Cor de fundo do botão */
+      border: none;
+      outline: none;
       text-decoration: none;
-      padding: 1% 2%; /* Ajuste de padding para harmonizar */
+      padding: 1% 10%; /* Ajuste de padding para harmonizar */
       border-radius: 50px;
       transition: background-color 0.3s ease;
-      display: block;
+      display: block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      display: inline-block;
     }
 
     .nav-link:hover {
@@ -148,13 +155,14 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #f0e8d0;
+      background-color: #f0d0d0;
       padding: 1% 2%; /* Ajuste de padding para harmonizar */
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       z-index: 999;
       text-align: left;
       transform: translateY(10px); /* Ajuste para a posição do submenu */
+      
     }
 
     .nav-menu-item:hover .submenu-powerbi {
@@ -179,7 +187,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #f0e8d0;
+      background-color: #f0d0d0;
       padding: 1% 2%; /* Ajuste de padding para harmonizar */
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -303,27 +311,17 @@
     <ul class="nav-menu">
       <li class="nav-menu-item">
         <a class="nav-link" href="#">Power BI</a>
-        <div class="submenu submenu-powerbi">
-          <a href="#">Dashboard Analítico de Vendas Globais</a>
-          <a href="#">Dashboard de Vendas, Custo, Margem de Lucro e KPI</a>
-          <!-- Adicione mais links para outros artigos de Power BI aqui -->
+     
         </div>
       </li>
       <li class="nav-menu-item">
-        <a class="nav-link" href="#">Python</a>
-        <div class="submenu submenu-python">
-          <!-- Adicione links para artigos de Python aqui -->
-          <a href="#">Artigo Python 1</a>
-          <a href="#">Artigo Python 2</a>
+        <a class="nav-link" href="./python/python.html">Python</a>
+      
         </div>
       </li>
       <li class="nav-menu-item">
-        <a class="nav-link" href="#">Certificados</a>
-        <div class="submenu submenu-certificados">
-          <!-- Adicione links para certificados aqui -->
-          <a href="#">Certificado 1</a>
-          <a href="#">Certificado 2</a>
-        </div>
+        <a class="nav-link" href="./certificações/certificados.html">Certificados</a>
+        
       </li>
     </ul>
   </header>
@@ -332,11 +330,16 @@
 
   <div class="artigo" id="artigo1">
     <!-- Conteúdo do segundo artigo - Dashboard de Vendas, Custo, Margem de Lucro e KPI -->
-    <h2>Dashboard de Vendas, Custo, Margem de Lucro e KPI</h2>
+    <h2>DASHBOARD DE VENDAS, CUSTO, MARGEM DE LUCRO E KPI</h2>
     <!-- Inserir o código do dashboard de Power BI aqui -->
     <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNWZlMTU2MjItMWFkMi00YmE2LWE5MTYtYjg5Y2IwN2MwOGEwIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
   </div>
-
+  
+  <div class="artigo" id="artigo2">
+    <!-- Conteúdo do segundo artigo - Dashboard de Vendas, Custo, Margem de Lucro e KPI -->
+    <h2> MINI-PROJETO 1 - ANALISE DE CAMPANHAS DE MARKETING COM POWER BI</h2>
+    <!-- Inserir o código do dashboard de Power BI aqui -->
+    <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNzk3ZDkxZmItYWYyOC00ODhkLWE1MDMtZDhmNDY0YWMyMzhjIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
   <!-- Mais artigos e seções podem ser adicionados aqui -->
 
   <!-- Botão de alternância -->
