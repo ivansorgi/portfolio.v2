@@ -1,323 +1,297 @@
-/* Estilos gerais */
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-    margin: 0;
-    padding: 0;
-    background-color: #f7f3e8; /* Cor de fundo dourado */
-    color: #333; /* Cor do texto padrão */
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o modo claro/escuro */
-    position: relative;
-  }
+  font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
+  color: #333; /* Cor do texto padrão */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o modo claro/escuro */
+}
 
-  /* Estilo para o modo escuro */
-  body.dark-mode {
-    background-color: #333;
-    color: #f7f3e8;
-  }
+/* Estilo para o modo escuro */
+body.dark-mode {
+  background-image: linear-gradient(135deg, #333, #222);
+  color: #f7f3e8;
+}
 
-  /* Cabeçalho */
-  header {
-    text-align: center;
-    padding: 0% 2%; /* Ajuste de padding para harmonizar */
-    position: relative;
-  }
+/* Cabeçalho */
+header {
+  font-size: 5vh;
+  padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+}
 
-  h1 {
-    font-size: 3vw; /* Tamanho do título ajustado com vw */
-    margin: 0;
-    color: #9b7401; /* Cor do título em dourado */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
-    padding-bottom: 2%; /* Ajuste de padding para harmonizar */
-    padding-top: 0%; /* Ajuste de padding para harmonizar */
-  }
+h1 {
+  font-size: 5vw; /* Tamanho do título ajustado com vw */
+  margin: 0;
+  color: #9b7401; /* Cor do título em dourado */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
+  padding-bottom: 2%; /* Ajuste de padding para harmonizar */
+  padding-top: 2%; /* Ajuste de padding para harmonizar */
+  transition: transform 0.3s ease; /* Transição suave para a rotação ao passar o mouse */
+  padding: 1.1% 0;
+  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
+}
 
-  p {
-    font-size: 1.5vw; /* Tamanho da fonte para o texto do cabeçalho (ajuste conforme desejado) */
-    line-height: 0.5; /* Espaçamento entre linhas para tornar o texto mais legível */
-  }
+h1:hover {
+  transform: rotate(-2deg); /* Rotação ao passar o mouse */
+}
+
+    p {
+      font-size: 1.5vw; /* Tamanho da fonte para o texto do cabeçalho (ajuste conforme desejado) */
+      line-height: 0.5; /* Espaçamento entre linhas para tornar o texto mais legível */
+    }
+
+    /* Botão de alternância */
+    .toggle-btn {
+      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 1.2vw; /* Tamanho do botão ajustado com vw */
+      background-color: #ffbf0079; /* Cor dourada para o botão */
+      color: #333; /* Cor do texto no botão */
+      border: none;
+      outline: none;
+      padding: 1% 1%; /* Ajuste de padding para harmonizar */
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 5%;
+      right: 0%;
+      z-index: 9999;
+    }
+
+    .toggle-btn:hover {
+      background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+    }
+
+    /* Botão de voltar ao topo */
+    .scroll-to-top-btn {
+      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      display: none;
+      position: fixed;
+      bottom: 8%;
+      right: 0%;
+      background-color: #ffbf0079; /* Cor dourada para o botão */
+      color: #333; /* Cor do texto no botão */
+      border: none;
+      outline: none;
+      padding: 1% 1.5%; /* Ajuste de padding para harmonizar */
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 9999;
+    }
+
+    .scroll-to-top-btn:hover {
+      background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+    }
+
+    /* Espaçamento dos artigos */
+    .artigo {
+      max-width: 90%;
+      margin: 5% auto; /* Espaçamento entre os artigos ajustado com vw */
+      text-align: left;
+      padding: 3%; /* Ajuste de padding para harmonizar */
+      background-color: #fff; /* Cor de fundo branca para os artigos */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .artigo h2 {
+      color: #684e02; /* Cor do título do artigo em dourado */
+      font-size: 2.3vw; /* Tamanho do título ajustado com vw */
+    }
+
+    .artigo p {
+      color: #4b4b4b; /* Cor do texto do artigo em um tom mais escuro */
+      font-size: 2vw;
+      line-height: 1.6; /* Espaçamento entre linhas */
+    }
+
+    /* Menu de navegação */
+    .nav-menu {
+      display: flex; /* Exibir os itens na horizontal */
+      justify-content: center; /* Centralizar horizontalmente */
+      margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
+      z-index: 9999;
+      position: relative;
+      right: 5%;
+    }
+
+    .nav-menu li {
+      list-style: none;
+      margin: 0 10%; /* Espaçamento entre os botões do menu ajustado com vw */
+      position: relative;
+    }
+
+    /* Estilos para o link do menu de navegação */
+    .nav-link {
+      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 1.5vw; /* Tamanho do link ajustado com vw */
+      color: #ffffff; /* Cor do link em dourado */
+      background-color: #333; /* Cor de fundo do botão */
+      border: none;
+      outline: none;
+      text-decoration: none;
+      padding: 50% 50%; /* Ajuste de padding para harmonizar */
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      display: block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .nav-link:hover {
+      background-color: #e6a100; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
+    }
+  
+    /* Estilo para o rodapé */
+    footer {
+      padding: 2% 0;
+      background-color: #535252; /* Cor de fundo do rodapé */
+      color: #f7f3e8; /* Cor do texto no rodapé */
+    }
+
+    /* Estilos para os botões do rodapé */
+    .social-btn {
+      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
+      color: #f7f3e8; /* Cor do texto no botão */
+      background-color: #333; /* Cor de fundo do botão */
+      border: none;
+      outline: none;
+      padding: 2% 3%; /* Ajuste de padding para harmonizar */
+      margin: 0 2%; /* Espaçamento entre os botões */
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .social-btn:hover {
+      background-color: #ffbf00; /* Cor do botão ao passar o mouse */
+      color: #333; /* Cor do texto no botão ao passar o mouse */
+    }
+
+    /* Estilos específicos para cada botão */
+    #github-btn {
+      background-color: #24292e; /* Cor do botão GitHub */
+      color: #fff; /* Cor do texto no botão GitHub */
+    }
+
+    #linkedin-btn {
+      background-color: #0e76a8; /* Cor do botão LinkedIn */
+      color: #fff; /* Cor do texto no botão LinkedIn */
+    }
+
+    #instagram-btn {
+      background-color: #bc2a8d; /* Cor do botão Instagram */
+      color: #fff; /* Cor do texto no botão Instagram */
+    }
+
+    /* Efeito de transição suave ao passar o mouse sobre os botões */
+    .social-btn:hover {
+      background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+      transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
+    }
+
+    /* Estilos para a seção de tecnologias usadas */
+.tecnologias {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.tecnologias-title {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.tecnologias-logos {
+  display: flex;
+  align-items: center; /* Centralizar verticalmente */
+  justify-content: center; /* Centralizar horizontalmente */
+}
+
+.tecnologias-logo {
+  margin: 0 60px; /* Espaço entre as logos */
+}
+
+/* Estilos para cada logo de tecnologia */
+.tecnologia-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.tecnologia-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Efeito de aumento ao passar o mouse */
+.tecnologia-logo:hover {
+  transform: scale(1.3);
+}
 
 
-  /* Botão de alternância */
-  .toggle-btn {
-    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-    font-size: 1.2vw; /* Tamanho do botão ajustado com vw */
-    background-color: #ffbf0079; /* Cor dourada para o botão */
-    color: #333; /* Cor do texto no botão */
-    border: none;
-    outline: none;
-    padding: 1% 1%; /* Ajuste de padding para harmonizar */
-    border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: fixed;
-    top: 5%;
-    right: 0%;
-    z-index: 9999;
-  }
+.tecnologia-logo:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .toggle-btn:hover {
-    background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
-  }
 
-  /* Botão de voltar ao topo */
-  .scroll-to-top-btn {
-    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-    display: none;
-    position: fixed;
-    bottom: 8%;
-    right: 0%;
-    background-color: #ffbf0079; /* Cor dourada para o botão */
-    color: #333; /* Cor do texto no botão */
-    border: none;
-    outline: none;
-    padding: 1% 1.5%; /* Ajuste de padding para harmonizar */
-    border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 9999;
-  }
 
-  .scroll-to-top-btn:hover {
-    background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
-  }
+  /* Estilos para o bloco de código Python */
+pre {
+  max-width: 90vw;
+  margin: 0 auto;
+  overflow-x: auto; /* Adicionar barra de rolagem horizontal, caso necessário */
+  white-space: pre-wrap; /* Manter a quebra de linha */
+  background-color: #f7f7f7; /* Cor de fundo para o bloco de código */
+  border: 2px solid #ddd; /* Borda sólida com cor cinza claro */
+  border-radius: 5px;
+  padding: 2vh 2vw; /* Espaçamento interno ajustado com VW e VH */
+  font-family: 'Courier New', monospace; /* Fonte monoespaçada para manter a formatação */
+  font-size: 1.8vw; /* Tamanho da fonte ajustado com VW */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto do código em preto escuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o bloco */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
 
-  /* Espaçamento dos artigos */
-  .artigo {
-    max-width: 90%;
-    margin: 5% auto; /* Espaçamento entre os artigos ajustado com vw */
-    text-align: left;
-    padding: 3%; /* Ajuste de padding para harmonizar */
-    background-color: #fff; /* Cor de fundo branca para os artigos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
+/* Efeito de hover no bloco de código */
+pre:hover {
+  background-color: #f2f2f2; /* Cor de fundo mais clara ao passar o mouse */
+  border-color: #ccc; /* Borda mais escura ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
+}
 
-  .artigo h2 {
-    color: #684e02; /* Cor do título do artigo em dourado */
-    font-size: 2vw; /* Tamanho do título ajustado com vw */
-  }
+/* Estilizar a seleção de texto no bloco de código */
+pre::selection {
+  background-color: #ffc107; /* Cor de seleção em amarelo */
+  color: #333; /* Cor do texto selecionado em preto escuro */
+}
 
-  .artigo p {
-    color: #4b4b4b; /* Cor do texto do artigo em um tom mais escuro */
-    line-height: 1.6; /* Espaçamento entre linhas */
-  }
-
-  /* Menu de navegação */
-  .nav-menu {
-    display: flex; /* Exibir os itens na horizontal */
-    justify-content: center; /* Centralizar horizontalmente */
-    margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
-    z-index: 9999;
-    position: relative;
-  }
-
-  .nav-menu li {
-    list-style: none;
-    margin: 0 1%; /* Espaçamento entre os botões do menu ajustado com vw */
-    position: relative;
-  }
-
-  /* Estilos para o link do menu de navegação */
-  .nav-link {
-    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-    font-size: 1.5vw; /* Tamanho do link ajustado com vw */
-    color: #ffffff; /* Cor do link em dourado */
-    background-color: #333; /* Cor de fundo do botão */
-    border: none;
-    outline: none;
-    text-decoration: none;
-    padding: 1% 10%; /* Ajuste de padding para harmonizar */
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-    display: block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .nav-link:hover {
-    background-color: #e6a100; /* Cor do link dourado mais escura ao passar o mouse */
-    color: #fff; /* Cor do texto do link ao passar o mouse */
-  }
-
-  /* Submenu para listar os artigos do Power BI */
-  .submenu-powerbi {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f0d0d0;
-    padding: 1% 2%; /* Ajuste de padding para harmonizar */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    text-align: left;
-    transform: translateY(10px); /* Ajuste para a posição do submenu */
-    
-  }
-
-  .nav-menu-item:hover .submenu-powerbi {
-    display: block;
-  }
-
-  .submenu-powerbi a {
-    font-size: 1.5vw; /* Tamanho do link do submenu ajustado com vw */
-    color: #333;
-    text-decoration: none;
-    padding: 1% 0; /* Ajuste de padding para harmonizar */
-    display: block;
-  }
-
-  .submenu-powerbi a:hover {
-    color: #684e02; /* Cor do título em dourado */
-  }
-
-  /* Submenu para Python */
-  .submenu-python {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f0d0d0;
-    padding: 1% 2%; /* Ajuste de padding para harmonizar */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    text-align: left;
-    transform: translateY(10px); /* Ajuste para a posição do submenu */
-  }
-
-  .nav-menu-item:hover .submenu-python {
-    display: block;
-  }
-
-  .submenu-python a {
-    font-size: 1.5vw; /* Tamanho do link do submenu ajustado com vw */
-    color: #333;
-    text-decoration: none;
-    padding: 1% 0; /* Ajuste de padding para harmonizar */
-    display: block;
-  }
-
-  .submenu-python a:hover {
-    color: #684e02; /* Cor do título em dourado */
-  }
-
-  /* Submenu para Certificados */
-  .submenu-certificados {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f0e8d0;
-    padding: 1% 2%; /* Ajuste de padding para harmonizar */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    text-align: left;
-    transform: translateY(10px); /* Ajuste para a posição do submenu */
-  }
-
-  .nav-menu-item:hover .submenu-certificados {
-    display: block;
-  }
-
-  .submenu-certificados a {
-    font-size: 1.5vw; /* Tamanho do link do submenu ajustado com vw */
-    color: #333;
-    text-decoration: none;
-    padding: 1% 0; /* Ajuste de padding para harmonizar */
-    display: block;
-  }
-
-  .submenu-certificados a:hover {
-    color: #684e02; /* Cor do título em dourado */
-  }
-
-  /* Estilo para o rodapé */
-  footer {
-    padding: 2% 0;
-    background-color: #333; /* Cor de fundo do rodapé */
-    color: #f7f3e8; /* Cor do texto no rodapé */
-  }
-
- /* Estilo para o rodapé */
- footer {
-    padding: 0.5% 0;
-    background-color: #333; /* Cor de fundo do rodapé */
-    color: #f7f3e8; /* Cor do texto no rodapé */
-    text-align: center;
-  }
-
-  /* Estilos para os botões do rodapé */
-  .social-btn {
-    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-    font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
-    color: #f7f3e8; /* Cor do texto no botão */
-    background-color: #333; /* Cor de fundo do botão */
-    border: none;
-    outline: none;
-    padding: 0.5% 3%; /* Ajuste de padding para harmonizar */
-    margin: 0 2%; /* Espaçamento entre os botões */
-    border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .social-btn:hover {
-    background-color: #ffbf00; /* Cor do botão ao passar o mouse */
-    color: #333; /* Cor do texto no botão ao passar o mouse */
-  }
-
-  /* Estilos específicos para cada botão */
-  #github-btn {
-    background-color: #24292e; /* Cor do botão GitHub */
-    color: #fff; /* Cor do texto no botão GitHub */
-  }
-
-  #linkedin-btn {
-    background-color: #0e76a8; /* Cor do botão LinkedIn */
-    color: #fff; /* Cor do texto no botão LinkedIn */
-  }
-
-  #instagram-btn {
-    background-color: #bc2a8d; /* Cor do botão Instagram */
-    color: #fff; /* Cor do texto no botão Instagram */
-  }
-
-  /* Efeito de transição suave ao passar o mouse sobre os botões */
-  .social-btn:hover {
-    background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
-    transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
-  }
-
-  /* Estilo para o bloco de código Python */
-  pre {
-    max-width: 90vw;
-    margin: 0 auto;
-    overflow-x: auto; /* Adicionar barra de rolagem horizontal, caso necessário */
-    white-space: pre-wrap; /* Manter a quebra de linha */
-  }
-
-  /* Ajuste de estilos para o código dentro do bloco <code> */
-  pre code {
-    display: block;
-    padding: 2vw; /* Tamanho do padding ajustado com vw */
-    background-color: #f0f0f0; /* Cor de fundo para destacar o bloco de código */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Courier New', monospace; /* Fonte monoespaçada para manter a formatação */
-    font-size: 2vw; /* Tamanho da fonte ajustado com vw */
-    line-height: 1.4; /* Espaçamento entre linhas */
-    color: #333; /* Cor do texto do código */
-  }
