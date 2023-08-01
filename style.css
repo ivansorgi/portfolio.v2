@@ -264,41 +264,25 @@ h1:hover {
   visibility: visible;
 }
 
-/* Estilo para o botão "Ver Mais" e "Ver Menos" */
-.ver-mais-btn {
-  font-size: 1.8vw;
-  padding: 1vw 2vw;
-  background-color: #9b7401; /* Cor de fundo dourado */
-  color: #fff; /* Cor do texto em branco */
+/* Resto do CSS */
+
+/* Estilo dos botões "Ver Mais" e "Ver Menos" */
+.ver-mais-btn,
+.ver-menos-btn {
+  background-color: #007bff;
+  color: #fff;
   border: none;
   border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.5vw;
   cursor: pointer;
-  margin-right: 1vw;
-  display: inline-block;
   transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
-/* Efeito de transição suave quando passar o mouse */
-.ver-mais-btn:hover {
-  background-color: #7a5801; /* Cor de fundo dourado escuro ao passar o mouse */
+.ver-mais-btn:hover,
+.ver-menos-btn:hover {
+  background-color: #0056b3;
 }
 
-/* Estilo para o botão "Ver Mais" e "Ver Menos" */
-.ver-mais-btn1 {
-  font-size: 1.8vw;
-  padding: 1vw 2vw;
-  background-color: #9b7401; /* Cor de fundo dourado */
-  color: #fff; /* Cor do texto em branco */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 1vw;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-/* Efeito de transição suave quando passar o mouse */
-.ver-mais-btn1:hover {
-  background-color: #7a5801; /* Cor de fundo dourado escuro ao passar o mouse */
-}
-
+/* Resto do CSS */

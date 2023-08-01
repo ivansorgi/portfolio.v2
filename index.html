@@ -41,13 +41,13 @@
     <p>1- Qual foi o total de valor venda considerando cada modo de envio dos pedidos? <br><br>2- Quais mercados tiveram o maior custo médio de envio dos produtos vendidos? <br><br>3- A empresa tem como objetivo (meta) manter uma média de 350 para o valor de venda todos os meses. Mostre um indicador (KPI–Key Performance Indicator) com o valor médio de venda. A empresa ficou abaixo ou acima da meta no mês de Abril/2014? <br><br>4- Considere que o lucro é equivalente a: valor venda - custo envio. Qual categoria de produto apresentou maior lucro médio. <br><br>5- Qual foi o comportamento da margem de lucro ao longo do tempo? Considere a margem de lucro como o lucro dividido pelo valor venda. <br> <br> ABRA O RELATÓRIO CLICANDO NO + : </p>
 
     <!-- Botão "Ver Mais" -->
-  <button class="ver-mais-btn" onclick="alternarIframe()">+</button>
+    <button class="ver-mais-btn" onclick="alternarIframe('iframe-container1')">+</button>
 
-  <!-- Iframe oculto inicialmente -->
-  <div id="iframe-container" style="display: none;">
-    <!-- Inserir o código do dashboard de Power BI aqui -->
-    <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNWZlMTU2MjItMWFkMi00YmE2LWE5MTYtYjg5Y2IwN2MwOGEwIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
-  </div>
+    <!-- Iframe oculto inicialmente -->
+    <div id="iframe-container1" style="display: none;">
+      <!-- Inserir o código do dashboard de Power BI aqui -->
+      <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNWZlMTU2MjItMWFkMi00YmE2LWE5MTYtYjg5Y2IwN2MwOGEwIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
 
   </div>
   
@@ -67,14 +67,14 @@
      <br> • Visão dos Padrões de Compra no Ponto de Venda (País) <br><br>
       Vou criar análises, responder perguntas de negócio, observar os dados por diferentes ângulos, <br> corrigir os dados, calcular métricas e extrair insights para ajudar os tomadores de decisão.</p>
     <!-- Botão "Ver Mais" -->
-  <button class="ver-mais-btn1" onclick="alternarIframe()">+</button>
+    <button class="ver-mais-btn" onclick="alternarIframe('iframe-container2')">+</button>
 
-  <!-- Iframe oculto inicialmente -->
-   <div id="iframe-container1" style="display: none;">
-    <!-- Inserir o código do dashboard de Power BI aqui -->  
-    <!-- Inserir o código do dashboard de Power BI aqui -->
-    <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNzk3ZDkxZmItYWYyOC00ODhkLWE1MDMtZDhmNDY0YWMyMzhjIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe> frameborder="0" allowFullScreen="true"></iframe>
+    <!-- Iframe oculto inicialmente -->
+    <div id="iframe-container2" style="display: none;">
+      <!-- Inserir o código do dashboard de Power BI aqui -->  
+      <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNzk3ZDkxZmItYWYyOC00ODhkLWE1MDMtZDhmNDY0YWMyMzhjIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
+
   </div>
   <!-- Mais artigos e seções podem ser adicionados aqui -->
 
@@ -137,40 +137,22 @@
         document.querySelector('.scroll-to-top-btn').style.display = 'none';
       }
     }
-    
-    //função para o artigo 1
-    var iframeVisible = false;
-var iframeContainer = document.getElementById("iframe-container");
-var verMaisBtn = document.querySelector(".ver-mais-btn");
 
-function alternarIframe() {
-  iframeVisible = !iframeVisible;
+    // Função para alternar a exibição do iframe e o texto do botão "Ver Mais"/"Ver Menos"
+    function alternarIframe(containerId) {
+      var iframeContainer = document.getElementById(containerId);
+      var verMaisBtn = iframeContainer.previousElementSibling;
 
-  if (iframeVisible) {
-    iframeContainer.style.display = "block";
-    verMaisBtn.textContent = "Ver Menos";
-  } else {
-    iframeContainer.style.display = "none";
-    verMaisBtn.textContent = "Ver Mais";
-  }
-}
+      if (iframeContainer.style.display === "none") {
+        iframeContainer.style.display = "block";
+        verMaisBtn.textContent = "Ver Menos";
+      } else {
+        iframeContainer.style.display = "none";
+        verMaisBtn.textContent = "Ver Mais";
+      }
+    }
 
-//função para o artigo 2
-var iframeVisible = false;
-var iframeContainer = document.getElementById("iframe-container1");
-var verMaisBtn = document.querySelector(".ver-mais-btn1");
 
-function alternarIframe() {
-  iframeVisible = !iframeVisible;
-
-  if (iframeVisible) {
-    iframeContainer.style.display = "block";
-    verMaisBtn.textContent = "Ver Menos";
-  } else {
-    iframeContainer.style.display = "none";
-    verMaisBtn.textContent = "Ver Mais";
-  }
-}
   </script>
 </body>
 </html>
