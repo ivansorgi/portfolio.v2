@@ -329,3 +329,39 @@ pre::selection {
   max-height: none; /* Exibir todo o conteúdo */
   transition: max-height 0.5s ease; /* Efeito de transição suave */
 }
+
+/* Estilo para o botão Ver Mais e Ver Menos */
+.ver-mais-btn,
+.ver-menos-btn {
+  font-size: 1.8vw;
+  padding: 1vw 2vw;
+  background-color: #9b7401; /* Cor de fundo dourado */
+  color: #fff; /* Cor do texto em branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1vw;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-right: 2vw; /* Espaçamento à direita com vw */
+}
+
+.ver-mais-btn:hover,
+.ver-menos-btn:hover {
+  background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+}
+
+.codigo-grande-btn{
+font-size: 1.4vw;
+  padding: 1vw 2vw;
+  background-color: #9b7401; /* Cor de fundo dourado */
+  color: #fff; /* Cor do texto em branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1vw;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-right: 2vw; /* Espaçamento à direita com vw */
+}
+
