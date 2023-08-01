@@ -296,3 +296,36 @@ pre::selection {
   color: #333; /* Cor do texto selecionado em preto escuro */
 }
 
+/* Estilo para o botão Ver Mais e Ver Menos */
+.ver-mais,
+.ver-menos {
+  font-size: 1.8vw;
+  padding: 1vw 2vw;
+  background-color: #9b7401; /* Cor de fundo dourado */
+  color: #fff; /* Cor do texto em branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1vw;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-right: 2vw; /* Espaçamento à direita com vw */
+}
+
+.ver-mais:hover,
+.ver-menos:hover {
+  background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+}
+
+/* Estilo para o código Python com tamanho reduzido */
+.codigo-reduzido {
+  max-height: 300px; /* Altura máxima do código reduzido */
+  overflow: hidden; /* Esconder o conteúdo excedente */
+  transition: max-height 0.5s ease; /* Efeito de transição suave */
+}
+
+/* Estilo para o código Python expandido (Ver Mais) */
+.codigo-expandido {
+  max-height: none; /* Exibir todo o conteúdo */
+  transition: max-height 0.5s ease; /* Efeito de transição suave */
+}
