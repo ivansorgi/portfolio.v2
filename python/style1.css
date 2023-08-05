@@ -359,7 +359,7 @@ pre::selection {
 .ver-mais,
   .ver-menos {
     font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+      font-size: 2vw; /* Tamanho do link ajustado com vw */
       color: #000000; /* Cor do link em dourado */
       background-color: var(--color-primary); /* Cor de fundo do botão */
       border: 2px solid var(--color-black);
@@ -373,6 +373,18 @@ pre::selection {
       text-decoration: none;
       text-align: center;
       text-transform: uppercase;
+  }
+
+  .ver-mais, .ver-menos {
+    /* Exibir os itens na horizontal */
+    justify-content: center; /* Centralizar horizontalmente */
+    margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
+    z-index: 9999;
+    position: relative;
+    left: 0%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    padding: 1rem;
   }
   
   .ver-mais:hover,
@@ -393,11 +405,9 @@ pre::selection {
   transition: max-height 0.5s ease; /* Efeito de transição suave */
 }
 
-/* Estilo para o botão Ver Mais e Ver Menos */
-.ver-mais-btn,
-.ver-menos-btn {
-  font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+.ver-mais-btn, .ver-menos-btn {
+font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 2vw; /* Tamanho do link ajustado com vw */
       color: #000000; /* Cor do link em dourado */
       background-color: var(--color-primary); /* Cor de fundo do botão */
       border: 2px solid var(--color-black);
@@ -411,12 +421,24 @@ pre::selection {
       text-decoration: none;
       text-align: center;
       text-transform: uppercase;
-}
+  }
 
-.ver-mais-btn:hover,
-.ver-menos-btn:hover {
-  background-color: #0056b3;
-}
+  .ver-mais-btn, .ver-menos-btn {
+    /* Exibir os itens na horizontal */
+    justify-content: center; /* Centralizar horizontalmente */
+    margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
+    z-index: 9999;
+    position: relative;
+    left: 0%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    padding: 1rem;
+  }
+  
+  .ver-mais-btn:hover,
+  .ver-menos-btn:hover {
+    background-color: #0056b3;
+  }
 
 .codigo-grande-btn{
 font-size: 3.4vw;
