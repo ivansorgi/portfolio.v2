@@ -84,7 +84,7 @@ h1:hover {
     /* Botão de alternância */
     .toggle-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 2.2vw; /* Tamanho do botão ajustado com vw */
+      font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
       background-color: #ffbf0079; /* Cor dourada para o botão */
       color: #333; /* Cor do texto no botão */
       border: none;
@@ -107,7 +107,7 @@ h1:hover {
     /* Botão de voltar ao topo */
     .scroll-to-top-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 10vw;
+      font-size: 6vw;
       display: none;
       position: fixed;
       bottom: 8%;
