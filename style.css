@@ -5,29 +5,85 @@ body {
   padding: 0;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
-  color: #333; /* Cor do texto padrão */
+  background-image: linear-gradient(90deg, #ffe7d1 0%, #fff2e6 100%); /* Gradiente de fundo */
+  color: #000000; /* Cor do texto padrão */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o modo claro/escuro */
 }
 
+:root {
+  --color-primary: #ed4d1b;
+  --color-secundary: #ff9a3c;
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+
 /* Estilo para o modo escuro */
 body.dark-mode {
-  background-image: linear-gradient(135deg, #333, #222);
+  background-image: linear-gradient(90deg, #333, #222);
   color: #f7f3e8;
 }
 
+
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mr-2 {
+  margin-bottom: 2rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* Cabeçalho */
-header {
+header, footer {
+ border-color: var(--color-black);
+ border-style: solid;
+ border-width: 0 5px 5px 5px;
   font-size: 5vh;
   padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
 }
 
+header img {
+  background-image: url('./index/portfolio.png');
+  background-size: cover; /* Ajusta a imagem para preencher o elemento */
+  background-repeat: no-repeat;
+  height: 25vw; /* Altura desejada para o cabeçalho */
+  text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
 h1 {
-  font-size: 5vw; /* Tamanho do título ajustado com vw */
+  font-size: 10vw; /* Tamanho do título ajustado com vw */
   margin: 0;
-  color: #9b7401; /* Cor do título em dourado */
+  color: #000000; /* Cor do título em dourado */
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -36,7 +92,7 @@ h1 {
   padding-top: 2%; /* Ajuste de padding para harmonizar */
   transition: transform 0.3s ease; /* Transição suave para a rotação ao passar o mouse */
   padding: 1.1% 0;
-  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
+  background-image: linear-gradient(135deg, #ffe7d1, #e45226da); /* Gradiente de fundo */
   border-radius: 10px;
 }
 
@@ -52,7 +108,7 @@ h1:hover {
     /* Botão de alternância */
     .toggle-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.2vw; /* Tamanho do botão ajustado com vw */
+      font-size: 2.2vw; /* Tamanho do botão ajustado com vw */
       background-color: #ffbf0079; /* Cor dourada para o botão */
       color: #333; /* Cor do texto no botão */
       border: none;
@@ -75,6 +131,7 @@ h1:hover {
     /* Botão de voltar ao topo */
     .scroll-to-top-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 10vw;
       display: none;
       position: fixed;
       bottom: 8%;
@@ -119,44 +176,50 @@ h1:hover {
 
     /* Menu de navegação */
     .nav-menu {
-      display: flex; /* Exibir os itens na horizontal */
+      /* Exibir os itens na horizontal */
       justify-content: center; /* Centralizar horizontalmente */
       margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
       z-index: 9999;
       position: relative;
-      right: 5%;
+      right: 12%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 1rem;
     }
 
     .nav-menu li {
       list-style: none;
-      margin: 0 10%; /* Espaçamento entre os botões do menu ajustado com vw */
+      margin: 0 35%; /* Espaçamento entre os botões do menu ajustado com vw */
       position: relative;
     }
 
     /* Estilos para o link do menu de navegação */
     .nav-link {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do link ajustado com vw */
-      color: #ffffff; /* Cor do link em dourado */
-      background-color: #333; /* Cor de fundo do botão */
-      border: none;
+      font-size: 3.5vw; /* Tamanho do link ajustado com vw */
+      color: #000000; /* Cor do link em dourado */
+      background-color: var(--color-primary); /* Cor de fundo do botão */
+      border: 2px solid var(--color-black);
       outline: none;
       text-decoration: none;
       padding: 50% 50%; /* Ajuste de padding para harmonizar */
+      max-width: 200rem;
       border-radius: 50px;
       transition: background-color 0.3s ease;
-      display: block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: block;box-shadow: 4px 4px 0 var(--color-black);
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
       text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
       display: inline-block;
     }
 
     .nav-link:hover {
-      background-color: #e6a100; /* Cor do link dourado mais escura ao passar o mouse */
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
       color: #fff; /* Cor do texto do link ao passar o mouse */
     }
-  
+
     /* Estilo para o rodapé */
     footer {
       padding: 2% 0;
@@ -167,7 +230,7 @@ h1:hover {
     /* Estilos para os botões do rodapé */
     .social-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
+      font-size: 3.5vw; /* Tamanho do botão ajustado com vw */
       color: #f7f3e8; /* Cor do texto no botão */
       background-color: #333; /* Cor de fundo do botão */
       border: none;
@@ -182,8 +245,23 @@ h1:hover {
       display: inline-block;
     }
 
+    #github-btn:hover {
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
+    }
+
+    #linkedin-btn:hover {
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
+    }
+
+    #instagram-btn:hover {
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
+    }
+
     .social-btn:hover {
-      background-color: #ffbf00; /* Cor do botão ao passar o mouse */
+      background-color: #000000; /* Cor do botão ao passar o mouse */
       color: #333; /* Cor do texto no botão ao passar o mouse */
     }
 
@@ -203,13 +281,7 @@ h1:hover {
       color: #fff; /* Cor do texto no botão Instagram */
     }
 
-    /* Efeito de transição suave ao passar o mouse sobre os botões */
-    .social-btn:hover {
-      background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
-      transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
-    }
-
-    /* Estilos para a seção de tecnologias usadas */
+   * Estilos para a seção de tecnologias usadas */
 .tecnologias {
   position: fixed;
   bottom: 20px;
@@ -221,7 +293,7 @@ h1:hover {
 }
 
 .tecnologias-title {
-  font-size: 1.8vw;
+  font-size: 3.5vw;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -285,4 +357,7 @@ h1:hover {
   background-color: #0056b3;
 }
 
-/* Resto do CSS */
+/* Responsividade */
+
+
+

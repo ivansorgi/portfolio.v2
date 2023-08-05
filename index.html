@@ -10,13 +10,13 @@
 </head>
 <body>
   <header>
-    <h1>PORTFOLIO POWER BI - Ivan R. Sorgi</h1>
-    <br> <br> <br> Bem-vindo ao meu portfólio de projetos Power BI, me chamo Ivan e aqui você encontrará dashboards desenvolvidos por mim, apresentados em código incorporado com o Power BI. <br> <br> Você pode interagir com os Dashboard's! <br> Cada relatório é acompanhado de uma explicação sobre ele, o que foi analisado e as tecnologias utilizadas. <br> <br> <br> Desenvolvi o site em HTML:5 / CSS / JAVASCRIPT, com links de contato integrados. <br> Ao rolar a página, um botão para voltar ao início aparecerá. <br> O índice redireciona para cada portfólio ou para a página de certificados. <br> <br> A página foi ajustada para se adequar a qualquer tela, mas para um melhor aproveitamento, visualize de um Desktop ou Notebook. <br> <br>  Obrigado pelo acesso! <br> <br> <br> </p>
+    <h1 class="header img"><img src="./index/portfolio.png" alt=""></h1>
+    <br> <br>  Bem-vindo ao meu portfólio de projetos, me chamo Ivan e aqui você encontrará relatórios em <span class="text-primary">PowerBI, Projetos em PYTHON, SQL, M</span>, todos integrados ao site e em funcionamento.<br> <br> <br> Desenvolvi o site em <span class="text-primary"> HTML:5 / CSS3 / JAVASCRIPT></span>, com links de contato integrados. <br> O índice redireciona para cada portfólio ou para a página de certificados. <br> <br> A página foi ajustada para se adequar a qualquer tela, mas para um melhor aproveitamento, visualize de um <span class="text-primary">Desktop</span> ou <span class="text-primary">Notebook</span>. <br> <br>  Obrigado pelo acesso! <br> <br> <br> 
   </div>
     <!-- Menu de navegação -->
     <ul class="nav-menu">
       <li class="nav-menu-item">
-        <a class="nav-link" href="#">POWER BI</a>
+        <a class="nav-link" href="./powerbi/powerbi.html">POWER BI</a>
      
         </div>
       </li>
@@ -31,50 +31,7 @@
       </li>
     </ul>
   </header>
-
-
-
-  <div class="artigo" id="artigo1">
-    <!-- Conteúdo resumido do segundo artigo - Dashboard de Vendas, Custo, Margem de Lucro e KPI -->
-    <h2>DASHBOARD DE VENDAS, CUSTO, MARGEM DE LUCRO E KPI</h2>
-    <p>Este dashboard foi construído através de 4 arquivos.csv, onde foi feita a limpeza e tratamentos dos dados usando o Power Query, modelagem de dados interligando as 4 tabelas, um KPI e aplicação de DAX para criação de duas novas colunas. Para ser feito, foi baseado em 5 perguntas: <br></p>
-    <p>1- Qual foi o total de valor venda considerando cada modo de envio dos pedidos? <br><br>2- Quais mercados tiveram o maior custo médio de envio dos produtos vendidos? <br><br>3- A empresa tem como objetivo (meta) manter uma média de 350 para o valor de venda todos os meses. Mostre um indicador (KPI–Key Performance Indicator) com o valor médio de venda. A empresa ficou abaixo ou acima da meta no mês de Abril/2014? <br><br>4- Considere que o lucro é equivalente a: valor venda - custo envio. Qual categoria de produto apresentou maior lucro médio. <br><br>5- Qual foi o comportamento da margem de lucro ao longo do tempo? Considere a margem de lucro como o lucro dividido pelo valor venda. <br> <br> ABRA O RELATÓRIO CLICANDO NO + : </p>
-
-    <!-- Botão "Ver Mais" -->
-    <button class="ver-mais-btn" onclick="alternarIframe('iframe-container1')">+</button>
-
-    <!-- Iframe oculto inicialmente -->
-    <div id="iframe-container1" style="display: none;">
-      <!-- Inserir o código do dashboard de Power BI aqui -->
-      <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNWZlMTU2MjItMWFkMi00YmE2LWE5MTYtYjg5Y2IwN2MwOGEwIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
-    </div>
-
-  </div>
   
-  
-  <div class="artigo" id="artigo2">
-    <!-- Conteúdo do segundo artigo - Dashboard de Vendas, Custo, Margem de Lucro e KPI -->
-    <h2> MINI-PROJETO 1 - ANALISE DE CAMPANHAS DE MARKETING COM POWER BI</h2>
-    <p>Este Mini-Projeto traz uma breve introdução à análise de campanhas de
-      Marketing com o Power BI. <br>São 4 Dashboards, mais de 10 elementos visuais, customizações, formatações, 
-      correções nos dados <br> e diferentes recursos do Power BI aplicados.
-      Os dados foram customizados e representam informações <br> sobre
-      clientes e campanhas de Marketing realizadas por uma empresa.
-      Para este Mini-Projeto <br> criarei diversos relatórios que serão divididos em 4 visões: <br>
-     <br> • Visão do Cliente
-      <br>• Visão do Comportamento de Compra do Cliente
-      <br>• Visão da Performance das Campanhas de Marketing
-     <br> • Visão dos Padrões de Compra no Ponto de Venda (País) <br><br>
-      Vou criar análises, responder perguntas de negócio, observar os dados por diferentes ângulos, <br> corrigir os dados, calcular métricas e extrair insights para ajudar os tomadores de decisão. <br> <br> ABRA O RELATÓRIO CLICANDO NO + :</p>
-    <!-- Botão "Ver Mais" -->
-    <button class="ver-mais-btn" onclick="alternarIframe('iframe-container2')">+</button>
-
-    <!-- Iframe oculto inicialmente -->
-    <div id="iframe-container2" style="display: none;">
-      <!-- Inserir o código do dashboard de Power BI aqui -->  
-      <iframe title="Report Section" width=100% height=700px src="https://app.powerbi.com/view?r=eyJrIjoiNzk3ZDkxZmItYWYyOC00ODhkLWE1MDMtZDhmNDY0YWMyMzhjIiwidCI6ImZiZmJlMjhkLWJmYjgtNDQ2My05YTA4LWY0NDRiNjVmN2I4MCJ9" frameborder="0" allowFullScreen="true"></iframe>
-    </div>
-
   </div>
   <!-- Mais artigos e seções podem ser adicionados aqui -->
 
@@ -89,6 +46,8 @@
     <a class="social-btn" id="linkedin-btn" href="https://www.linkedin.com/in/ivan-sorgi/" target="_blank">LinkedIn</a>
     <a class="social-btn" id="instagram-btn" href="https://www.instagram.com/ivansorgi/" target="_blank">Instagram</a> 
   
+    <br>
+    <br>
     
     
       <p class="tecnologias-title">Tecnologias usadas:</p>
@@ -137,22 +96,6 @@
         document.querySelector('.scroll-to-top-btn').style.display = 'none';
       }
     }
-
-    // Função para alternar a exibição do iframe e o texto do botão "Ver Mais"/"Ver Menos"
-    function alternarIframe(containerId) {
-      var iframeContainer = document.getElementById(containerId);
-      var verMaisBtn = iframeContainer.previousElementSibling;
-
-      if (iframeContainer.style.display === "none") {
-        iframeContainer.style.display = "block";
-        verMaisBtn.textContent = "Ver Menos";
-      } else {
-        iframeContainer.style.display = "none";
-        verMaisBtn.textContent = "Ver Mais";
-      }
-    }
-
-
   </script>
 </body>
 </html>

@@ -4,8 +4,8 @@ body {
   padding: 0;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
-  color: #333; /* Cor do texto padrão */
+  background-image: linear-gradient(90deg, #ffe7d1 0%, #fff2e6 100%); /* Gradiente de fundo */
+  color: #000000; /* Cor do texto padrão */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o modo claro/escuro */
 }
 
@@ -15,18 +15,52 @@ body.dark-mode {
   color: #f7f3e8;
 }
 
-/* Cabeçalho */
-header {
-  font-size: 5vh;
-  padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+:root {
+  --color-primary: #ed4d1b;
+  --color-secundary: #ff9a3c;
+  --color-black: #000;
+  --color-white: #fff;
 }
 
+ body, header {
+  border-color: var(--color-black);
+  border-style: solid;
+  border-width: 0 0px 5px 0px;
+   font-size: 5vh;
+   padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
+   position: relative;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+ }
+ 
+  footer {
+      border-color: var(--color-black);
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+   font-size: 5vh;
+   padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
+   position: relative;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+
+  }
+
+ header img {
+  background-image: url('./digital/certificados.png');
+  background-size: cover; /* Ajusta a imagem para preencher o elemento */
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 25vw; /* Altura desejada para o cabeçalho */
+  text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+
 h1 {
-  font-size: 5vw; /* Tamanho do título ajustado com vw */
+  font-size: 10vw; /* Tamanho do título ajustado com vw */
   margin: 0;
-  color: #9b7401; /* Cor do título em dourado */
+  color: #000000; /* Cor do título em dourado */
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -35,7 +69,7 @@ h1 {
   padding-top: 2%; /* Ajuste de padding para harmonizar */
   transition: transform 0.3s ease; /* Transição suave para a rotação ao passar o mouse */
   padding: 1.1% 0;
-  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
+  background-image: linear-gradient(135deg, #ffe7d1, #e45226da); /* Gradiente de fundo */
   border-radius: 10px;
 }
 
@@ -51,7 +85,7 @@ h1:hover {
     /* Botão de alternância */
     .toggle-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.2vw; /* Tamanho do botão ajustado com vw */
+      font-size: 2.2vw; /* Tamanho do botão ajustado com vw */
       background-color: #ffbf0079; /* Cor dourada para o botão */
       color: #333; /* Cor do texto no botão */
       border: none;
@@ -74,6 +108,7 @@ h1:hover {
     /* Botão de voltar ao topo */
     .scroll-to-top-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 10vw;
       display: none;
       position: fixed;
       bottom: 8%;
@@ -96,7 +131,7 @@ h1:hover {
 
     /* Espaçamento dos artigos */
     .artigo {
-      max-width: 90%;
+      max-width: 90vw;
       margin: 5% auto; /* Espaçamento entre os artigos ajustado com vw */
       text-align: left;
       padding: 3%; /* Ajuste de padding para harmonizar */
@@ -107,159 +142,174 @@ h1:hover {
 
     .artigo h2 {
       color: #684e02; /* Cor do título do artigo em dourado */
-      font-size: 2.3vw; /* Tamanho do título ajustado com vw */
+      font-size: 3.3vw; /* Tamanho do título ajustado com vw */
     }
 
     .artigo p {
-      color: #4b4b4b; /* Cor do texto do artigo em um tom mais escuro */
-      font-size: 2vw;
+      color: #000000; /* Cor do texto do artigo em um tom mais escuro */
+      font-size: 4vw;
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6; /* Espaçamento entre linhas */
     }
 
     /* Menu de navegação */
-    .nav-menu {
-      display: flex; /* Exibir os itens na horizontal */
-      justify-content: center; /* Centralizar horizontalmente */
-      margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
-      z-index: 9999;
-      position: relative;
-      right: 5%;
-    }
+  .nav-menu {
+    /* Exibir os itens na horizontal */
+    justify-content: center; /* Centralizar horizontalmente */
+    margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
+    z-index: 9999;
+    position: relative;
+    right: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+  }
 
-    .nav-menu li {
-      list-style: none;
-      margin: 0 10%; /* Espaçamento entre os botões do menu ajustado com vw */
-      position: relative;
-    }
+  .nav-menu li {
+    list-style: none;
+    margin: 0 35%; /* Espaçamento entre os botões do menu ajustado com vw */
+    position: relative;
+  }
 
-    /* Estilos para o link do menu de navegação */
-    .nav-link {
-      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do link ajustado com vw */
-      color: #ffffff; /* Cor do link em dourado */
-      background-color: #333; /* Cor de fundo do botão */
-      border: none;
-      outline: none;
-      text-decoration: none;
-      padding: 50% 50%; /* Ajuste de padding para harmonizar */
-      border-radius: 50px;
-      transition: background-color 0.3s ease;
-      display: block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
-      text-decoration: none;
-      display: inline-block;
-    }
+  /* Estilos para o link do menu de navegação */
+  .nav-link {
+    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+    font-size: 3.5vw; /* Tamanho do link ajustado com vw */
+    color: #000000; /* Cor do link em dourado */
+    background-color: var(--color-primary); /* Cor de fundo do botão */
+    border: 2px solid var(--color-black);
+    outline: none;
+    text-decoration: none;
+    padding: 50% 50%; /* Ajuste de padding para harmonizar */
+    max-width: 200rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    display: block;box-shadow: 4px 4px 0 var(--color-black);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+  }
 
-    .nav-link:hover {
-      background-color: #e6a100; /* Cor do link dourado mais escura ao passar o mouse */
-      color: #fff; /* Cor do texto do link ao passar o mouse */
-    }
-  
-    /* Estilo para o rodapé */
-    footer {
-      padding: 2% 0;
-      background-color: #535252; /* Cor de fundo do rodapé */
-      color: #f7f3e8; /* Cor do texto no rodapé */
-    }
+  .nav-link:hover {
+    background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+    color: #fff; /* Cor do texto do link ao passar o mouse */
+  }
+  /* Estilo para o rodapé */
+  footer {
+    padding: 2% 0;
+    background-color: #535252; /* Cor de fundo do rodapé */
+    color: #f7f3e8; /* Cor do texto no rodapé */
+  }
 
-    /* Estilos para os botões do rodapé */
-    .social-btn {
-      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
-      color: #f7f3e8; /* Cor do texto no botão */
-      background-color: #333; /* Cor de fundo do botão */
-      border: none;
-      outline: none;
-      padding: 2% 3%; /* Ajuste de padding para harmonizar */
-      margin: 0 2%; /* Espaçamento entre os botões */
-      border-radius: 50px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
-      text-decoration: none;
-      display: inline-block;
-    }
+  /* Estilos para os botões do rodapé */
+  .social-btn {
+    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+    font-size: 3.5vw; /* Tamanho do botão ajustado com vw */
+    color: #f7f3e8; /* Cor do texto no botão */
+    background-color: #333; /* Cor de fundo do botão */
+    border: none;
+    outline: none;
+    padding: 2% 3%; /* Ajuste de padding para harmonizar */
+    margin: 0 2%; /* Espaçamento entre os botões */
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+    text-decoration: none;
+    display: inline-block;
+  }
 
-    .social-btn:hover {
-      background-color: #ffbf00; /* Cor do botão ao passar o mouse */
-      color: #333; /* Cor do texto no botão ao passar o mouse */
-    }
+  #github-btn:hover {
+    background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+    color: #fff; /* Cor do texto do link ao passar o mouse */
+  }
 
-    /* Estilos específicos para cada botão */
-    #github-btn {
-      background-color: #24292e; /* Cor do botão GitHub */
-      color: #fff; /* Cor do texto no botão GitHub */
-    }
+  #linkedin-btn:hover {
+    background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+    color: #fff; /* Cor do texto do link ao passar o mouse */
+  }
 
-    #linkedin-btn {
-      background-color: #0e76a8; /* Cor do botão LinkedIn */
-      color: #fff; /* Cor do texto no botão LinkedIn */
-    }
+  #instagram-btn:hover {
+    background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+    color: #fff; /* Cor do texto do link ao passar o mouse */
+  }
 
-    #instagram-btn {
-      background-color: #bc2a8d; /* Cor do botão Instagram */
-      color: #fff; /* Cor do texto no botão Instagram */
-    }
+  /* Estilos específicos para cada botão */
+  #github-btn {
+    background-color: #24292e; /* Cor do botão GitHub */
+    color: #fff; /* Cor do texto no botão GitHub */
+  }
 
-    /* Efeito de transição suave ao passar o mouse sobre os botões */
-    .social-btn:hover {
-      background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
-      transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
-    }
+  #linkedin-btn {
+    background-color: #0e76a8; /* Cor do botão LinkedIn */
+    color: #fff; /* Cor do texto no botão LinkedIn */
+  }
 
-    /* Estilos para a seção de tecnologias usadas */
+  #instagram-btn {
+    background-color: #bc2a8d; /* Cor do botão Instagram */
+    color: #fff; /* Cor do texto no botão Instagram */
+  }
+
+  /* Efeito de transição suave ao passar o mouse sobre os botões */
+  .social-btn:hover {
+    background-color: #000000; /* Cor dourada mais escura ao passar o mouse */
+    transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
+  }
+
+  /* Estilos para a seção de tecnologias usadas */
 .tecnologias {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  color: #333;
+position: fixed;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
+color: #333;
 }
 
 .tecnologias-title {
-  font-size: 1.8vw;
-  font-weight: bold;
-  margin-right: 10px;
+font-size: 3.5vw;
+font-weight: bold;
+margin-right: 10px;
 }
 
 .tecnologias-logos {
-  display: flex;
-  align-items: center; /* Centralizar verticalmente */
-  justify-content: center; /* Centralizar horizontalmente */
+display: flex;
+align-items: center; /* Centralizar verticalmente */
+justify-content: center; /* Centralizar horizontalmente */
 }
 
 .tecnologias-logo {
-  margin: 0 60px; /* Espaço entre as logos */
+margin: 0 60px; /* Espaço entre as logos */
 }
 
 /* Estilos para cada logo de tecnologia */
 .tecnologia-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  overflow: hidden;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+width: 50px;
+height: 50px;
+margin-right: 10px;
+overflow: hidden;
+border-radius: 50%;
+transition: transform 0.3s ease;
 }
 
 .tecnologia-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity 0.3s ease;
 }
 
 /* Efeito de aumento ao passar o mouse */
 .tecnologia-logo:hover {
-  transform: scale(1.3);
+transform: scale(1.3);
 }
 
 
 .tecnologia-logo:hover::before {
-  opacity: 1;
-  visibility: visible;
+opacity: 1;
+visibility: visible;
 }
-

@@ -4,8 +4,8 @@ body {
   padding: 0;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
-  color: #333; /* Cor do texto padrão */
+  background-image: linear-gradient(90deg, #ffe7d1 0%, #fff2e6 100%); /* Gradiente de fundo */
+  color: #000000; /* Cor do texto padrão */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o modo claro/escuro */
 }
 
@@ -15,18 +15,51 @@ body.dark-mode {
   color: #f7f3e8;
 }
 
-/* Cabeçalho */
-header {
-  font-size: 5vh;
-  padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+:root {
+  --color-primary: #ed4d1b;
+  --color-secundary: #ff9a3c;
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+ body, header {
+  border-color: var(--color-black);
+  border-style: solid;
+  border-width: 0 0px 5px 0px;
+   font-size: 5vh;
+   padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
+   position: relative;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+ }
+ 
+  footer {
+      border-color: var(--color-black);
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+   font-size: 5vh;
+   padding: 2vh 5vw; /* Ajuste de padding para espaçamento */
+   position: relative;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no cabeçalho */
+
+  }
+
+ header img {
+  background-image: url('./index/portfolio.png');
+  background-size: cover; /* Ajusta a imagem para preencher o elemento */
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 25vw; /* Altura desejada para o cabeçalho */
+  text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+.text-primary {
+  color: var(--color-primary);
 }
 
 h1 {
   font-size: 5vw; /* Tamanho do título ajustado com vw */
   margin: 0;
-  color: #9b7401; /* Cor do título em dourado */
+  color: #000000; /* Cor do título em dourado */
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -35,7 +68,7 @@ h1 {
   padding-top: 2%; /* Ajuste de padding para harmonizar */
   transition: transform 0.3s ease; /* Transição suave para a rotação ao passar o mouse */
   padding: 1.1% 0;
-  background-image: linear-gradient(135deg, #f7df1e, #f78c06); /* Gradiente de fundo */
+  background-image: linear-gradient(135deg, #ffe7d1, #e45226da); /* Gradiente de fundo */
   border-radius: 10px;
 }
 
@@ -51,7 +84,7 @@ h1:hover {
     /* Botão de alternância */
     .toggle-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.2vw; /* Tamanho do botão ajustado com vw */
+      font-size: 2.2vw; /* Tamanho do botão ajustado com vw */
       background-color: #ffbf0079; /* Cor dourada para o botão */
       color: #333; /* Cor do texto no botão */
       border: none;
@@ -74,6 +107,7 @@ h1:hover {
     /* Botão de voltar ao topo */
     .scroll-to-top-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 10vw;
       display: none;
       position: fixed;
       bottom: 8%;
@@ -107,52 +141,58 @@ h1:hover {
 
     .artigo h2 {
       color: #684e02; /* Cor do título do artigo em dourado */
-      font-size: 2.3vw; /* Tamanho do título ajustado com vw */
+      font-size: 3.3vw; /* Tamanho do título ajustado com vw */
     }
 
     .artigo p {
       color: #4b4b4b; /* Cor do texto do artigo em um tom mais escuro */
-      font-size: 2vw;
+      font-size: 3vw;
       line-height: 1.6; /* Espaçamento entre linhas */
     }
 
     /* Menu de navegação */
     .nav-menu {
-      display: flex; /* Exibir os itens na horizontal */
+      /* Exibir os itens na horizontal */
       justify-content: center; /* Centralizar horizontalmente */
       margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
       z-index: 9999;
       position: relative;
-      right: 5%;
+      right: 15%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 1rem;
     }
 
     .nav-menu li {
       list-style: none;
-      margin: 0 10%; /* Espaçamento entre os botões do menu ajustado com vw */
+      margin: 0 35%; /* Espaçamento entre os botões do menu ajustado com vw */
       position: relative;
     }
 
     /* Estilos para o link do menu de navegação */
     .nav-link {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do link ajustado com vw */
-      color: #ffffff; /* Cor do link em dourado */
-      background-color: #333; /* Cor de fundo do botão */
-      border: none;
+      font-size: 3.5vw; /* Tamanho do link ajustado com vw */
+      color: #000000; /* Cor do link em dourado */
+      background-color: var(--color-primary); /* Cor de fundo do botão */
+      border: 2px solid var(--color-black);
       outline: none;
       text-decoration: none;
       padding: 50% 50%; /* Ajuste de padding para harmonizar */
+      max-width: 200rem;
       border-radius: 50px;
       transition: background-color 0.3s ease;
-      display: block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: block;box-shadow: 4px 4px 0 var(--color-black);
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
       text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
       display: inline-block;
     }
 
     .nav-link:hover {
-      background-color: #e6a100; /* Cor do link dourado mais escura ao passar o mouse */
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
       color: #fff; /* Cor do texto do link ao passar o mouse */
     }
   
@@ -161,12 +201,13 @@ h1:hover {
       padding: 2% 0;
       background-color: #535252; /* Cor de fundo do rodapé */
       color: #f7f3e8; /* Cor do texto no rodapé */
+      font-size: 3vw;
     }
 
     /* Estilos para os botões do rodapé */
     .social-btn {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
+      font-size: 3.5vw; /* Tamanho do botão ajustado com vw */
       color: #f7f3e8; /* Cor do texto no botão */
       background-color: #333; /* Cor de fundo do botão */
       border: none;
@@ -179,6 +220,21 @@ h1:hover {
       transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
       text-decoration: none;
       display: inline-block;
+    }
+
+    #github-btn:hover {
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
+    }
+
+    #linkedin-btn:hover {
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
+    }
+
+    #instagram-btn:hover {
+      background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+      color: #fff; /* Cor do texto do link ao passar o mouse */
     }
 
     .social-btn:hover {
@@ -204,7 +260,7 @@ h1:hover {
 
     /* Efeito de transição suave ao passar o mouse sobre os botões */
     .social-btn:hover {
-      background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+      background-color: #000000; /* Cor dourada mais escura ao passar o mouse */
       transform: scale(1.1); /* Efeito de escala no botão ao passar o mouse */
     }
 
@@ -220,7 +276,7 @@ h1:hover {
 }
 
 .tecnologias-title {
-  font-size: 1.8vw;
+  font-size: 3.5vw;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -298,24 +354,28 @@ pre::selection {
 
 /* Estilo para o botão Ver Mais e Ver Menos */
 .ver-mais,
-.ver-menos {
-  font-size: 1.8vw;
-  padding: 1vw 2vw;
-  background-color: #9b7401; /* Cor de fundo dourado */
-  color: #fff; /* Cor do texto em branco */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 1vw;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  margin-right: 2vw; /* Espaçamento à direita com vw */
-}
-
-.ver-mais:hover,
-.ver-menos:hover {
-  background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
-}
+  .ver-menos {
+    font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+      color: #000000; /* Cor do link em dourado */
+      background-color: var(--color-primary); /* Cor de fundo do botão */
+      border: 2px solid var(--color-black);
+      outline: none;
+      padding: 5% 5%; /* Ajuste de padding para harmonizar */
+      max-width: 200rem;
+      border-radius: 50px;
+      display: block;box-shadow: 2px 2px 0 var(--color-black);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+  }
+  
+  .ver-mais:hover,
+  .ver-menos:hover {
+    background-color: #0056b3;
+  }
 
 /* Estilo para o código Python com tamanho reduzido */
 .codigo-reduzido {
@@ -333,26 +393,30 @@ pre::selection {
 /* Estilo para o botão Ver Mais e Ver Menos */
 .ver-mais-btn,
 .ver-menos-btn {
-  font-size: 1.8vw;
-  padding: 1vw 2vw;
-  background-color: #9b7401; /* Cor de fundo dourado */
-  color: #fff; /* Cor do texto em branco */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 1vw;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  margin-right: 2vw; /* Espaçamento à direita com vw */
+  font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+      color: #000000; /* Cor do link em dourado */
+      background-color: var(--color-primary); /* Cor de fundo do botão */
+      border: 2px solid var(--color-black);
+      outline: none;
+      padding: 5% 5%; /* Ajuste de padding para harmonizar */
+      max-width: 200rem;
+      border-radius: 50px;
+      display: block;box-shadow: 2px 2px 0 var(--color-black);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
 }
 
 .ver-mais-btn:hover,
 .ver-menos-btn:hover {
-  background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
+  background-color: #0056b3;
 }
 
 .codigo-grande-btn{
-font-size: 1.4vw;
+font-size: 3.4vw;
   padding: 1vw 2vw;
   background-color: #9b7401; /* Cor de fundo dourado */
   color: #fff; /* Cor do texto em branco */
