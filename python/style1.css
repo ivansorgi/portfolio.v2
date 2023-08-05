@@ -170,12 +170,13 @@ h1:hover {
       list-style: none;
       margin: 0 35%; /* Espaçamento entre os botões do menu ajustado com vw */
       position: relative;
+      left: 20%;
     }
 
     /* Estilos para o link do menu de navegação */
     .nav-link {
       font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 3.5vw; /* Tamanho do link ajustado com vw */
+      font-size: 2vw; /* Tamanho do link ajustado com vw */
       color: #000000; /* Cor do link em dourado */
       background-color: var(--color-primary); /* Cor de fundo do botão */
       border: 2px solid var(--color-black);
