@@ -409,7 +409,7 @@ pre::selection {
 .ver-mais-btn,
 .ver-menos-btn {
   font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+      font-size: 2.1vw; /* Tamanho do link ajustado com vw */
       color: #000000; /* Cor do link em dourado */
       background-color: var(--color-primary); /* Cor de fundo do botão */
       border: 2px solid var(--color-black);
