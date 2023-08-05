@@ -130,7 +130,7 @@ h1:hover {
 
     /* Espaçamento dos artigos */
     .artigo {
-      max-width: 90%;
+      max-width: 100%;
       margin: 5% auto; /* Espaçamento entre os artigos ajustado com vw */
       text-align: left;
       padding: 3%; /* Ajuste de padding para harmonizar */
