@@ -229,6 +229,7 @@ h1:hover {
       padding: 2% 0;
       background-color: #535252; /* Cor de fundo do rodapé */
       color: #f7f3e8; /* Cor do texto no rodapé */
+      border-radius: 1%;
     }
 
     /* Estilos para os botões do rodapé */
