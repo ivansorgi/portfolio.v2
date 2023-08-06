@@ -48,6 +48,10 @@ header img {
   text-align: center; /* Centraliza o texto no cabeçalho */
 }
 
+.text-primary {
+  color: var(--color-primary);
+}
+
 header nav {
   display: grid;
   grid-template-columns: 1fr;
