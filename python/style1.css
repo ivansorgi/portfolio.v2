@@ -84,25 +84,7 @@ h1:hover {
       line-height: 0.5; /* Espaçamento entre linhas para tornar o texto mais legível */
     }
 
-    /* Botão de alternância */
-    .toggle-btn {
-      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 1.5vw; /* Tamanho do botão ajustado com vw */
-      background-color: #ffbf0079; /* Cor dourada para o botão */
-      color: #333; /* Cor do texto no botão */
-      border: none;
-      outline: none;
-      padding: 1% 1%; /* Ajuste de padding para harmonizar */
-      border-radius: 50px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      position: fixed;
-      top: 5%;
-      right: 0%;
-      z-index: 9999;
-    }
-
+    
     .toggle-btn:hover {
       background-color: #e6a100; /* Cor dourada mais escura ao passar o mouse */
     }
@@ -142,10 +124,13 @@ h1:hover {
       border-radius: 5px;
     }
 
+    
+
     .artigo h2 {
       color: #684e02; /* Cor do título do artigo em dourado */
       font-size: 5.3vw; /* Tamanho do título ajustado com vw */
     }
+    
 
     .artigo p {
       color: #4b4b4b; /* Cor do texto do artigo em um tom mais escuro */
