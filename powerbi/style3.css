@@ -149,7 +149,7 @@ body {
   
       .artigo p {
         color: #000000; /* Cor do texto do artigo em um tom mais escuro */
-        font-size: 3vw;
+        font-size: 2.5vw;
         font-family: 'Roboto', sans-serif;
         line-height: 1.6; /* Espaçamento entre linhas */
       }
@@ -325,13 +325,13 @@ body {
   .ver-mais-btn,
   .ver-menos-btn {
     font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
-      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+      font-size: 1.5vw; /* Tamanho do link ajustado com vw */
       color: #000000; /* Cor do link em dourado */
       background-color: var(--color-primary); /* Cor de fundo do botão */
       border: 2px solid var(--color-black);
       outline: none;
-      padding: 5% 5%; /* Ajuste de padding para harmonizar */
-      max-width: 200rem;
+      padding:  1% 2.5%; /* Ajuste de padding para harmonizar */
+      max-width: 100rem;
       border-radius: 50px;
       display: block;box-shadow: 2px 2px 0 var(--color-black);
       cursor: pointer;
