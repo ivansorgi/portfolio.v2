@@ -144,14 +144,31 @@ h1:hover {
 
     .artigo h2 {
       color: #684e02; /* Cor do título do artigo em dourado */
-      font-size: 3.3vw; /* Tamanho do título ajustado com vw */
+      font-size: 5.3vw; /* Tamanho do título ajustado com vw */
     }
 
     .artigo p {
       color: #4b4b4b; /* Cor do texto do artigo em um tom mais escuro */
       font-size: 3vw;
       line-height: 1.6; /* Espaçamento entre linhas */
+      max-width: 100%;
     }
+
+    /* Definindo o layout da grade (grid) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Três colunas com largura igual */
+  grid-gap: 20px; /* Espaçamento entre as colunas */
+  font-size: 2vw;
+  
+}
+
+/* Estilizando os itens da grade (grid) */
+.grid-item {
+  border: 1px solid #ddd; /* Borda para cada tabela */
+  padding: 10px; /* Espaçamento interno para cada tabela */
+}
+
 
     /* Menu de navegação */
     .nav-menu {
@@ -440,6 +457,43 @@ pre::selection {
   
   .ver-mais-btn:hover,
   .ver-menos-btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Estilo para o botão Ver Mais e Ver Menos */
+.ver-mais-btn1,
+.ver-menos-btn1 {
+  font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 2.1vw; /* Tamanho do link ajustado com vw */
+      color: #000000; /* Cor do link em dourado */
+      background-color: var(--color-primary); /* Cor de fundo do botão */
+      border: 2px solid var(--color-black);
+      outline: none;
+      padding: 5% 5%; /* Ajuste de padding para harmonizar */
+      max-width: 200rem;
+      border-radius: 50px;
+      display: block;box-shadow: 2px 2px 0 var(--color-black);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  .ver-mais-btn1, .ver-menos-btn1 {
+    /* Exibir os itens na horizontal */
+    justify-content: center; /* Centralizar horizontalmente */
+    margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
+    z-index: 9999;
+    position: relative;
+    left: 0%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    padding: 1rem;
+  }
+  
+  .ver-mais-btn1:hover,
+  .ver-menos-btn1:hover {
     background-color: #0056b3;
   }
 

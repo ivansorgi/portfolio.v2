@@ -33,7 +33,7 @@
 
   <div class="artigo" id="projetos-python">
     <h2>Jogo da Forca em Python</h2>
-    <p>Veja o notebook interativo no Google Colab e rode o código agora mesmo:</p> 
+    <h3>Veja o notebook interativo no Google Colab e rode o código agora mesmo:</h3>  
     <a href=https://colab.research.google.com/github/ivansorgi/arquivospython/blob/main/Jogodaforca.ipynb target="_blank">Clique aqui para abrir o notebook</a> <br> <br>
 
     <!-- Código Python -->
@@ -96,13 +96,481 @@
     <!-- Botão Ver Menos -->
   
   </div>
-  
+
   <div class="artigo" id="artigo2">
+    <!-- Conteúdo do segundo artigo -->
+    <h2>Análise e extração com Pandas e Excel.</h2>
+    <h3>O projeto abaixo tem como base de dados um arquivo.xlsx de 100.000 linhas e 7 colunas. Os dados foram extraídos, tratados e exibidos em três tabelas com seus valores totais, gerando ao final do código 3 tabelas. Essas tabelas foram enviadas automaticamente por e-mail, exemplificando assim um relatório semanal de vendas, por exemplo. <br> <br> Logo abaixo teremos o código e as tabelas expostas como resultado da análise!</h3>
+    
+    
+    
+  
+    
+  
+    <!-- Código Python inicialmente oculto -->
+    <div class="codigo-oculto">
+      <pre class="codigo-reduzido">
+        <code>
+            import pandas as pd
+            import win32com.client as win32
+            
+            #importar a base de dados
+            tabela_vendas = pd.read_excel('Vendas.xlsx')
+            
+            #visualizar a base de dados
+            pd.set_option('display.max_columns', None)
+            print(tabela_vendas)
+            
+            print('-' * 50)
+            
+            #faturamento por loja
+            faturamento = tabela_vendas[['ID Loja', 'Valor Final']].groupby('ID Loja').sum()
+            print(faturamento)
+            
+            print('-' * 50)
+            
+            #quantidade de produtos vendidos por loja
+            vendasloja = tabela_vendas[['ID Loja', 'Quantidade' ]].groupby('ID Loja').sum()
+            print(vendasloja)
+            
+            print('-' * 50)
+            
+            #ticket médio por produto em cada loja
+            ticket_medio = (faturamento['Valor Final'] / vendasloja['Quantidade']).to_frame()
+            ticket_medio = ticket_medio.rename(columns={0: 'Ticket Médio'})
+            print(ticket_medio)
+            
+            print('-' * 50) 
+            
+
+            <h2>Envio de email automático</h2>
+            <br>
+            #enviar um email com o relatório
+
+            outlook = win32.Dispatch('outlook.application')
+            mail = outlook.CreateItem(0)
+            mail.To = 'example@mail.com'
+            mail.Subject = 'Relatório de Vendas por Loja'
+            mail.HTMLBody = f'''
+            <p>Prezados,</p>
+            
+            <p>Segue o Relatório de Vendas por cada Loja.</p>
+            
+            <p>Faturamento:</p>
+            {faturamento.to_html(formatters={'Valor Final': 'R${:,.2f}'.format})}
+            
+            <p>Quantidade Vendida:</p>
+            {vendasloja.to_html()}
+            
+            <p>Ticket Médio dos Produtos em cada Loja:</p>
+            {ticket_medio.to_html(formatters={'Ticket Médio': 'R${:,.2f}'.format})}
+            
+            <p>Qualquer dúvida estou à disposição.</p>
+            
+            <p>Att.,</p>
+            <p>Ivan</p>
+            '''
+            
+
+
+            mail.Send()
+            
+            print("Email enviado!")
+
+            <h2>Transformação de tabelas Pandas em HTML</h2>
+            
+            df = pd.DataFrame(faturamento)
+            tabela_html = df.to_html(formatters={'Valor Final': 'R${:,.2f}'.format})
+            print(tabela_html)
+            
+            df1 = pd.DataFrame(vendasloja)
+            tabela_html1 = df1.to_html()
+            print(tabela_html1)
+            
+            df2 = pd.DataFrame(ticket_medio)
+            tabela_html2 = df2.to_html(formatters={'Ticket Médio': 'R${:,.2f}'.format})
+            print(tabela_html2)
+        </code>
+      </pre>
+    </div>
+    <br>
+    <br>
+    <br>
+  
+    <!-- Botão "Ver Mais" -->
+    <button class="ver-mais-btn1" onclick="mostrarCodigo2()">Ver Mais</button>
+  
+    <!-- Botão "Ver Menos" -->
+    <button class="ver-menos-btn1" onclick="recolherCodigo2()">Ver Menos</button>
+   <br>
+   <br>
+    <div class="grid-container">
+        <div class="grid-item">
+          <!-- Tabela 1 -->
+          <table border="1" class="dataframe">
+            <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>Valor Final</th>
+              </tr>
+              <tr>
+                <th>ID Loja</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Bourbon Shopping SP</th>
+                <td>R$1,726,110.00</td>
+              </tr>
+              <tr>
+                <th>Center Shopping Uberlândia</th>
+                <td>R$1,668,921.00</td>
+              </tr>
+              <tr>
+                <th>Iguatemi Campinas</th>
+                <td>R$1,762,419.00</td>
+              </tr>
+              <tr>
+                <th>Iguatemi Esplanada</th>
+                <td>R$1,699,681.00</td>
+              </tr>
+              <tr>
+                <th>Norte Shopping</th>
+                <td>R$1,711,968.00</td>
+              </tr>
+              <tr>
+                <th>Novo Shopping Ribeirão Preto</th>
+                <td>R$1,678,225.00</td>
+              </tr>
+              <tr>
+                <th>Palladium Shopping Curitiba</th>
+                <td>R$1,721,120.00</td>
+              </tr>
+              <tr>
+                <th>Parque Dom Pedro Shopping</th>
+                <td>R$1,631,630.00</td>
+              </tr>
+              <tr>
+                <th>Passei das Águas Shopping</th>
+                <td>R$1,649,014.00</td>
+              </tr>
+              <tr>
+                <th>Ribeirão Shopping</th>
+                <td>R$1,707,122.00</td>
+              </tr>
+              <tr>
+                <th>Rio Mar Recife</th>
+                <td>R$1,722,766.00</td>
+              </tr>
+              <tr>
+                <th>Rio Mar Shopping Fortaleza</th>
+                <td>R$1,698,430.00</td>
+              </tr>
+              <tr>
+                <th>Salvador Shopping</th>
+                <td>R$1,646,739.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Barra</th>
+                <td>R$1,653,103.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Center Interlagos</th>
+                <td>R$1,640,486.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Center Leste Aricanduva</th>
+                <td>R$1,682,870.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Eldorado</th>
+                <td>R$1,648,111.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Ibirapuera</th>
+                <td>R$1,635,060.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Iguatemi Fortaleza</th>
+                <td>R$1,674,824.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Midway Mall</th>
+                <td>R$1,590,441.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Morumbi</th>
+                <td>R$1,586,444.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Recife</th>
+                <td>R$1,624,879.00</td>
+              </tr>
+              <tr>
+                <th>Shopping SP Market</th>
+                <td>R$1,721,763.00</td>
+              </tr>
+              <tr>
+                <th>Shopping União de Osasco</th>
+                <td>R$1,663,770.00</td>
+              </tr>
+              <tr>
+                <th>Shopping Vila Velha</th>
+                <td>R$1,731,167.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-item">
+          <!-- Tabela 2 -->
+          <table border="1" class="dataframe">
+            <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>Quantidade</th>
+              </tr>
+              <tr>
+                <th>ID Loja</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Bourbon Shopping SP</th>
+                <td>8863</td>
+              </tr>
+              <tr>
+                <th>Center Shopping Uberlândia</th>
+                <td>8627</td>
+              </tr>
+              <tr>
+                <th>Iguatemi Campinas</th>
+                <td>8935</td>
+              </tr>
+              <tr>
+                <th>Iguatemi Esplanada</th>
+                <td>8580</td>
+              </tr>
+              <tr>
+                <th>Norte Shopping</th>
+                <td>9014</td>
+              </tr>
+              <tr>
+                <th>Novo Shopping Ribeirão Preto</th>
+                <td>8751</td>
+              </tr>
+              <tr>
+                <th>Palladium Shopping Curitiba</th>
+                <td>9091</td>
+              </tr>
+              <tr>
+                <th>Parque Dom Pedro Shopping</th>
+                <td>8388</td>
+              </tr>
+              <tr>
+                <th>Passei das Águas Shopping</th>
+                <td>8618</td>
+              </tr>
+              <tr>
+                <th>Ribeirão Shopping</th>
+                <td>8825</td>
+              </tr>
+              <tr>
+                <th>Rio Mar Recife</th>
+                <td>8863</td>
+              </tr>
+              <tr>
+                <th>Rio Mar Shopping Fortaleza</th>
+                <td>8937</td>
+              </tr>
+              <tr>
+                <th>Salvador Shopping</th>
+                <td>8698</td>
+              </tr>
+              <tr>
+                <th>Shopping Barra</th>
+                <td>8638</td>
+              </tr>
+              <tr>
+                <th>Shopping Center Interlagos</th>
+                <td>8675</td>
+              </tr>
+              <tr>
+                <th>Shopping Center Leste Aricanduva</th>
+                <td>8938</td>
+              </tr>
+              <tr>
+                <th>Shopping Eldorado</th>
+                <td>8719</td>
+              </tr>
+              <tr>
+                <th>Shopping Ibirapuera</th>
+                <td>8723</td>
+              </tr>
+              <tr>
+                <th>Shopping Iguatemi Fortaleza</th>
+                <td>8629</td>
+              </tr>
+              <tr>
+                <th>Shopping Midway Mall</th>
+                <td>8206</td>
+              </tr>
+              <tr>
+                <th>Shopping Morumbi</th>
+                <td>8508</td>
+              </tr>
+              <tr>
+                <th>Shopping Recife</th>
+                <td>8581</td>
+              </tr>
+              <tr>
+                <th>Shopping SP Market</th>
+                <td>8927</td>
+              </tr>
+              <tr>
+                <th>Shopping União de Osasco</th>
+                <td>8730</td>
+              </tr>
+              <tr>
+                <th>Shopping Vila Velha</th>
+                <td>9224</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-item">
+          <!-- Tabela 3 -->
+          <table border="1" class="dataframe">
+            <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>Ticket Médio</th>
+              </tr>
+              <tr>
+                <th>ID Loja</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Bourbon Shopping SP</th>
+                <td>R$194.75</td>
+              </tr>
+              <tr>
+                <th>Center Shopping Uberlândia</th>
+                <td>R$193.45</td>
+              </tr>
+              <tr>
+                <th>Iguatemi Campinas</th>
+                <td>R$197.25</td>
+              </tr>
+              <tr>
+                <th>Iguatemi Esplanada</th>
+                <td>R$198.10</td>
+              </tr>
+              <tr>
+                <th>Norte Shopping</th>
+                <td>R$189.92</td>
+              </tr>
+              <tr>
+                <th>Novo Shopping Ribeirão Preto</th>
+                <td>R$191.78</td>
+              </tr>
+              <tr>
+                <th>Palladium Shopping Curitiba</th>
+                <td>R$189.32</td>
+              </tr>
+              <tr>
+                <th>Parque Dom Pedro Shopping</th>
+                <td>R$194.52</td>
+              </tr>
+              <tr>
+                <th>Passei das Águas Shopping</th>
+                <td>R$191.35</td>
+              </tr>
+              <tr>
+                <th>Ribeirão Shopping</th>
+                <td>R$193.44</td>
+              </tr>
+              <tr>
+                <th>Rio Mar Recife</th>
+                <td>R$194.38</td>
+              </tr>
+              <tr>
+                <th>Rio Mar Shopping Fortaleza</th>
+                <td>R$190.04</td>
+              </tr>
+              <tr>
+                <th>Salvador Shopping</th>
+                <td>R$189.32</td>
+              </tr>
+              <tr>
+                <th>Shopping Barra</th>
+                <td>R$191.38</td>
+              </tr>
+              <tr>
+                <th>Shopping Center Interlagos</th>
+                <td>R$189.11</td>
+              </tr>
+              <tr>
+                <th>Shopping Center Leste Aricanduva</th>
+                <td>R$188.28</td>
+              </tr>
+              <tr>
+                <th>Shopping Eldorado</th>
+                <td>R$189.03</td>
+              </tr>
+              <tr>
+                <th>Shopping Ibirapuera</th>
+                <td>R$187.44</td>
+              </tr>
+              <tr>
+                <th>Shopping Iguatemi Fortaleza</th>
+                <td>R$194.09</td>
+              </tr>
+              <tr>
+                <th>Shopping Midway Mall</th>
+                <td>R$193.81</td>
+              </tr>
+              <tr>
+                <th>Shopping Morumbi</th>
+                <td>R$186.46</td>
+              </tr>
+              <tr>
+                <th>Shopping Recife</th>
+                <td>R$189.36</td>
+              </tr>
+              <tr>
+                <th>Shopping SP Market</th>
+                <td>R$192.87</td>
+              </tr>
+              <tr>
+                <th>Shopping União de Osasco</th>
+                <td>R$190.58</td>
+              </tr>
+              <tr>
+                <th>Shopping Vila Velha</th>
+                <td>R$187.68</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+
+    
+  
+  </div>
+
+
+  
+  <div class="artigo" id="artigo3">
     <!-- Conteúdo do segundo artigo -->
     <h2>Agenda Telefônica com SQL integrado.</h2>
     
     <!-- Link para o notebook Jupyter -->
-    <p>Veja o notebook interativo no Google Colab e rode o código agora mesmo:</p> 
+    <h3>Veja o notebook interativo no Google Colab e rode o código agora mesmo:</h3> 
     <a href="https://colab.research.google.com/github/ivansorgi/arquivospython/blob/main/agendapyandsql.ipynb" target="_blank">Clique aqui para abrir o notebook</a> <br> <br> <br>
   
     <!-- Botão de aviso sobre o tamanho do código -->
@@ -667,10 +1135,10 @@ if __name__ == "__main__":
     <br>
   
     <!-- Botão "Ver Mais" -->
-    <button class="ver-mais-btn" onclick="mostrarCodigo2()">Ver Mais</button>
+    <button class="ver-mais-btn" onclick="mostrarCodigo3()">Ver Mais</button>
   
     <!-- Botão "Ver Menos" -->
-    <button class="ver-menos-btn" onclick="recolherCodigo2()">Ver Menos</button>
+    <button class="ver-menos-btn" onclick="recolherCodigo3()">Ver Menos</button>
   </div>
    
   <!-- Mais artigos e seções podem ser adicionados aqui -->
@@ -735,6 +1203,17 @@ if __name__ == "__main__":
     function recolherCodigo2() {
       document.querySelector('#artigo2 .codigo-reduzido').classList.remove('codigo-expandido');
     }
+
+    // Função para mostrar todo o código do segundo artigo
+    function mostrarCodigo3() {
+      document.querySelector('#artigo3 .codigo-reduzido').classList.add('codigo-expandido');
+    }
+
+    // Função para recolher o código do segundo artigo
+    function recolherCodigo3() {
+      document.querySelector('#artigo3 .codigo-reduzido').classList.remove('codigo-expandido');
+    }
+
 
     // Função para alternar entre o modo claro e escuro
     function alternarModo() {
