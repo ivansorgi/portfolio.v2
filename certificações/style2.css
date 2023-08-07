@@ -212,7 +212,7 @@ h1:hover {
     border: 2px solid var(--color-black);
     outline: none;
     text-decoration: none;
-    padding: 5% 5%; /* Ajuste de padding para harmonizar */
+    padding: 2% 2%; /* Ajuste de padding para harmonizar */
     max-width: 200rem;
     border-radius: 50px;
     transition: background-color 0.3s ease;
