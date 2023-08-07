@@ -1155,7 +1155,8 @@ if __name__ == "__main__":
     <a class="social-btn" id="linkedin-btn" href="https://www.linkedin.com/in/ivan-sorgi/" target="_blank">LinkedIn</a>
     <a class="social-btn" id="instagram-btn" href="https://www.instagram.com/ivansorgi/" target="_blank">Instagram</a>  
    <br>
-    <br>
+   <br>
+    
     <p class="tecnologias-title">Tecnologias usadas:</p>
     <div class="tecnologias-logos">
       <div class="tecnologia-logo" data-tooltip="HTML">
@@ -1192,6 +1193,7 @@ if __name__ == "__main__":
         });
     });
 
+
     // Função para mostrar todo o código do primeiro artigo
     function mostrarCodigo() {
       document.querySelector('#projetos-python .codigo-reduzido').classList.add('codigo-expandido');
@@ -1200,7 +1202,18 @@ if __name__ == "__main__":
     // Função para recolher o código do primeiro artigo
     function recolherCodigo() {
       document.querySelector('#projetos-python .codigo-reduzido').classList.remove('codigo-expandido');
-    }
+
+  // Obtém a posição do início do artigo
+      var artigoElement = document.querySelector('#artigo1');
+      var artigoPosicao = artigoElement.getBoundingClientRect().top + window.pageYOffset;
+
+  // Faz a página rolar para o início do artigo com uma animação suave
+      window.scrollTo({
+      top: artigoPosicao,
+      behavior: 'smooth'
+    });
+   }
+    
 
     // Função para mostrar todo o código do segundo artigo
     function mostrarCodigo2() {

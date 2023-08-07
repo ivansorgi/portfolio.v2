@@ -170,7 +170,7 @@ h1:hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Três colunas com largura igual */
-  grid-gap: 20px; /* Espaçamento entre as colunas */
+  grid-gap: 60px; /* Espaçamento entre as colunas */
   font-size: 2vw;
   
 }
