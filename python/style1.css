@@ -139,6 +139,33 @@ h1:hover {
       max-width: 100%;
     }
 
+    
+    .oculto {
+        display: none;
+    }
+
+    .artigo-btn {
+      font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
+      font-size: 2.5vw; /* Tamanho do link ajustado com vw */
+      color: #000000; /* Cor do link em dourado */
+      background-color: var(--color-primary); /* Cor de fundo do botão */
+      border: 2px solid var(--color-black);
+      outline: none;
+      text-decoration: none;
+      padding: 5% 5%; /* Ajuste de padding para harmonizar */
+      max-width: 200rem;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      display: block;box-shadow: 4px 4px 0 var(--color-black);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+
     /* Definindo o layout da grade (grid) */
 .grid-container {
   display: grid;
