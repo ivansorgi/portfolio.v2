@@ -189,7 +189,6 @@ h1:hover {
       margin-top: 2%; /* Espaçamento entre o título e o menu ajustado com vw */
       z-index: 9999;
       position: relative;
-      right: 13%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 1rem;
@@ -199,7 +198,7 @@ h1:hover {
       list-style: none;
       margin: 0 35%; /* Espaçamento entre os botões do menu ajustado com vw */
       position: relative;
-      left: 20%;
+      left: 10%;
     }
 
     /* Estilos para o link do menu de navegação */
