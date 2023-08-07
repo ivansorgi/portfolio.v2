@@ -218,6 +218,11 @@ h1:hover {
     display: inline-block;
   }
 
+  .artigo-btn:hover {
+    background-color: #030303d5; /* Cor do link dourado mais escura ao passar o mouse */
+    color: #fff; /* Cor do texto do link ao passar o mouse */
+  }
+
     /* Menu de navegação */
   .nav-menu {
     /* Exibir os itens na horizontal */
